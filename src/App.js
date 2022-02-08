@@ -1,6 +1,8 @@
 import "./App.css";
+import ExpenseItem from "./components/ExpenseItem";
+
 const App = () => {
-  return <h1>hello react</h1>;
+  return <ExpenseItem></ExpenseItem>;
 };
 
 export default App;
