@@ -1,11 +1,13 @@
 import "./App.css";
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
   return (
-
-      <Expenses></Expenses>
-
+    <div>
+      <NewExpense />
+      <Expenses />
+    </div>
   );
 };
 
