@@ -1,5 +1,4 @@
 //father : app.js
-import React, { useState } from "react";
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
@@ -7,12 +6,9 @@ import Card from "../UI/Card";
 // props is our way to passing data to children
 const ExpenseItem = (props) => {
   //STATE HANDLERS
-  const [title, settitle] = useState(props.title);
 
   // ACTION HANDLERS
-  const clickHandler = () => {
-    settitle("clicked");
-  };
+
   // return need () if the return parameter is more than 1 line
   return (
     // must all JSX be in one single <div>
@@ -26,10 +22,9 @@ const ExpenseItem = (props) => {
       {/* these items will be Card props.children */}
       <ExpenseDate date={props.date}></ExpenseDate>
       <div className="expense-item__description">
-        <h2>{title}</h2>
+        <h2>{props.title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
-      <button onClick={clickHandler}>Edit</button>
     </Card>
   );
 };
